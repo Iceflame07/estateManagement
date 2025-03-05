@@ -1,7 +1,9 @@
+package testForData;
 import com.walkingCompiler.Data.models.gatePost;
 import com.walkingCompiler.Data.models.House;
 import com.walkingCompiler.Data.models.Visitor;
 import org.junit.jupiter.api.Assertions;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import static com.sun.tools.javac.util.Constants.format;
 import static org.junit.Assert.assertNotEquals;
@@ -56,7 +58,14 @@ public class dataTest {
 
     @Test
     public void testGatePostGetterAndSetter() {
-        gatePost validate = new gatePost("Jeff", "Visitor", 1, );
+        gatePost validate = new gatePost("Jeff", "Visitor", 1, "HH:mm");
         validate.setSecurityName("Jeff");
+        validate.setVisitorDetails("Visitor");
+        validate.verifyOTP(String.valueOf(1));
+        validate.setMyTime(LocalTime.parse("HH:mm"));
+        Assertions.assertEquals("", validate.getSecurityName());
+        Assertions.assertEquals("Visitor", validate.getVisitorDetails());
+        Assertions.assertEquals(, validate.getMyTime());
+        Assertions.assertEquals("HH:mm", validate.getMyTime());
     }
 }

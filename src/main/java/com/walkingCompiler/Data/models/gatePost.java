@@ -11,14 +11,14 @@ public class gatePost extends House {
     @Getter @Setter private LocalTime myTime;
 
 
-    public gatePost(String securityName, String visitorDetails, int verifyOTP, LocalTime myTime) {
+    public gatePost(String securityName, String visitorDetails, int verifyOTP, String myTime) {
         this.securityName = securityName;
         this.visitorDetails = visitorDetails;
         this.verifyOTP = verifyOTP;
-        this.myTime = myTime;
+        this.myTime = LocalTime.parse(myTime);
     }
 
-    public boolean verifyOTP(String OTP, String providedCode) {
+    public boolean verifyOTP(String OTP) {
         if (OTP == null) {
             return false;
         } else {

@@ -13,7 +13,7 @@ public class modelTest {
         house.setAddress("");
         house.setNumber(12);
         Assertions.assertEquals("",house.getAddress());
-        Assertions.assertEquals(12,house.getNumber());
+        Assertions.assertEquals(12,house.getNumber(0));
     }
 
     @Test

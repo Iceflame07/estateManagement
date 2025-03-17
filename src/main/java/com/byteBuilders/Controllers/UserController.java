@@ -1,28 +1,33 @@
 package com.byteBuilders.Controllers;
-import com.byteBuilders.Data.models.User;
+import com.byteBuilders.DTOs.Request.LoginRequest;
+import com.byteBuilders.DTOs.Request.RegisterRequest;
 import com.byteBuilders.Services.UserService;
-import org.springframework.boot.SpringApplication;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
 @RestController
 @RequestMapping("/User")
 public class UserController {
 
-    public static void main(String[] args) {
-        SpringApplication.run(UserController.class, args);
-    }
-    
+    @Autowired
     private UserService userService;
 
-
-    public String UserController(UserService userService) {
-        this.userService = userService;
-        return "";
+    @PostMapping
+    public String createName(@RequestBody RegisterRequest registerRequest) {
+        return userService.registerUser(registerRequest);
     }
-    
+    @PostMapping
+    public String createPassword(@RequestBody RegisterRequest registerRequest) {
+        return userService.registerUser(registerRequest);
+    }
+
     @GetMapping
-    public List<User> getAllUsers() {
-        return UserService.getAllUser();
+    public String LoginName(@RequestBody LoginRequest loginRequest) {
+        return userService.loginUser(loginRequest);
+    }
+
+    @GetMapping
+    public String LoginPassword(@RequestBody LoginRequest loginRequest) {
+        return userService.loginUser(loginRequest);
     }
 };

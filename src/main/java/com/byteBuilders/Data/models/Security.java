@@ -1,21 +1,18 @@
 package com.byteBuilders.Data.models;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
-public class Security extends User {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Security extends User{
 
     @Id
-    private String securityName;
-    private int securityId;
-    private int securityPassword;
-
-    public Security(String securityName,
-                    int securityId,
-                    int securityPassword) {
-
-        super(securityName, String.valueOf(securityId), securityPassword);
-    }
+    private String Name;
+    private int Id;
+    private int Password;
 }

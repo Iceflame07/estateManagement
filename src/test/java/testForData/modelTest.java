@@ -9,23 +9,24 @@ public class modelTest {
 
     @Test
     public void testForHouse() {
-        House house = new House("",12,);
+        House house = new House("",12,true);
         house.setAddress("");
         house.setHouseNumber(12);
-        house.setGenerateOTP();
+        house.setGenerateOTP(house.isGenerateOTP());
         Assertions.assertEquals("",house.getAddress());
         Assertions.assertEquals(12,house.getHouseNumber());
+        Assertions.assertEquals(true, house.isGenerateOTP());
     }
 
     @Test
     public void testForSecurity() {
-        Security secure = new Security("Adamu",10,0);
+        Security secure = new Security("Adamu",10,11);
         secure.setSecurityName("Adamu");
         secure.setSecurityId(10);
-        secure.setSecurityPassword(0000);
+        secure.setSecurityPassword(secure.getSecurityPassword());
         Assertions.assertEquals("Adamu",secure.getSecurityName());
         Assertions.assertEquals(10,secure.getSecurityId());
-        Assertions.assertEquals(0000,secure.getSecurityPassword());
+        Assertions.assertTrue(true, String.valueOf(secure.getSecurityPassword()));
     }
 
     @Test

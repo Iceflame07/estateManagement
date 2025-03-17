@@ -9,5 +9,4 @@ public interface UserRepository extends MongoRepository {
     User findByName(String name);
     User findByEmail(String email);
     User findByPassword(int password);
-
 }

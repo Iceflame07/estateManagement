@@ -4,13 +4,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface HouseRepository extends MongoRepository {
+public interface HouseRepository extends MongoRepository<House, String> {
 
-    House findByHouseNumber(int HouseNumber);
-    House findByHouseAddress(String HouseAddress);
-    House save(House address);
-    House update(House address);
-    void delete(House address);
-
-
+    House findByNumber(int Number);
+    House findByAddress(String Address);
 }

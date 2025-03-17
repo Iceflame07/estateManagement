@@ -1,18 +1,12 @@
 package com.byteBuilders.Services;
-import com.byteBuilders.Data.models.House;
-import org.springframework.stereotype.Service;
-import java.util.List;
+import com.byteBuilders.DTOs.Request.LoginRequest;
+import com.byteBuilders.DTOs.Request.LogoutRequest;
+import com.byteBuilders.DTOs.Request.RegisterRequest;
+import com.byteBuilders.DTOs.Response.LoginResponse;
 
-@Service
 public interface HouseService {
-
-    static List<House> getAllHouses() {
-        return List.of(
-                new House (
-                        "Herbert Street",
-                        12,
-                        1001
-                )
-        );
-    }
+    public RegisterRequest registerHouse(RegisterRequest registerRequest);
+    public LoginRequest loginHouse();
+    public LogoutRequest logoutHouse(LogoutRequest logoutRequest, String password);
+    public LoginResponse loginResponse(String loginResponse);
 }

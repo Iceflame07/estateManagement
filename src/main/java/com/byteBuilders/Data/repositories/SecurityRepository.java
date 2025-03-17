@@ -1,14 +1,10 @@
 package com.byteBuilders.Data.repositories;
 import com.byteBuilders.Data.models.Security;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
 
-import java.util.List;
+public interface SecurityRepository {
 
-@Repository
-public interface SecurityRepository extends MongoRepository<Security, String> {
+    Security findBySecurityName(String SecurityName);
+    Security findBySecurityId(int SecurityId);
+    Security save(Security security);
 
-    List<Security> findByName(String name);
-    List<Security> findById(int id);
-    List<Security> findByEmail(String email);
 }

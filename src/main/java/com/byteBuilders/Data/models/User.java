@@ -9,7 +9,17 @@ public class User extends House{
 
     @Id
     private String name;
-    private int Id;
     private String email;
-    private int password;
+    private double password;
+
+    public User(String name,
+                int email,
+                String password) {
+
+        super(name, Integer.parseInt(email), password);
+
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 }

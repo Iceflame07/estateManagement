@@ -9,16 +9,17 @@ public class modelTest {
 
     @Test
     public void testForHouse() {
-        House house = new House();
+        House house = new House("",12,);
         house.setAddress("");
-        house.setNumber(12);
+        house.setHouseNumber(12);
+        house.setGenerateOTP();
         Assertions.assertEquals("",house.getAddress());
-        Assertions.assertEquals(12,house.getNumber(0));
+        Assertions.assertEquals(12,house.getHouseNumber());
     }
 
     @Test
     public void testForSecurity() {
-        Security secure = new Security();
+        Security secure = new Security("",0,"");
         secure.setSecurityName("");
         secure.setAddress("");
         secure.setPassword(0);
@@ -29,14 +30,13 @@ public class modelTest {
 
     @Test
     public void testForUser() {
-        User uses = new User();
-        uses.setName("");
-        uses.setEmail("");
-        uses.setPassword(0);
-        uses.setId(0);
-        Assertions.assertEquals("",uses.getName());
-        Assertions.assertEquals("",uses.getEmail());
-        Assertions.assertEquals(0,uses.getId());
+        User uses = new User("","",0000);
+        uses.setName("George");
+        uses.setEmail("George@gmail.com");
+        uses.setPassword(0000);
+        Assertions.assertEquals("George",uses.getName());
+        Assertions.assertEquals("George@gmail.com",uses.getEmail());
+        Assertions.assertEquals(0000,uses.getPassword());
         Assertions.assertTrue(true, String.valueOf(uses.getPassword()));
         Assertions.assertFalse(false, String.valueOf(uses.getPassword()));
     }

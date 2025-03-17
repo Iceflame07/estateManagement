@@ -1,4 +1,5 @@
 package com.byteBuilders.Services;
 
-public class SecurityService {
+public interface SecurityService {
+
 }

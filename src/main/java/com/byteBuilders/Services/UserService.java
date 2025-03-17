@@ -1,4 +1,5 @@
 package com.byteBuilders.Services;
 
-public class UserService {
+public interface UserService {
+
 }

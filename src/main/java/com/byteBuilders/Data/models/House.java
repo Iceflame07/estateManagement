@@ -9,5 +9,16 @@ public class House {
 
     @Id
     private String address;
-    private int number;
+    private int houseNumber;
+    private int generateOTP;
+
+
+    public House(String address,
+                 int houseNumber,
+                 double generateOTP) {
+
+        this.address = address;
+        this.houseNumber = houseNumber;
+        this.generateOTP = (int) generateOTP;
+    }
 }

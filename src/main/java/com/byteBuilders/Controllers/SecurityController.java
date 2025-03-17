@@ -1,22 +1,25 @@
 package com.byteBuilders.Controllers;
+import com.byteBuilders.Data.models.Security;
+import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("")
 public class SecurityController {
 
+    public static void main(String[] args) {
+        SpringApplication.run(SecurityController.class, args);
+    }
+
     @GetMapping("/Security")
-    public String Security(@RequestBody String securityName) {
-        return securityName;
-    }
-
-    @PostMapping("/Security")
-    public int addId(@RequestBody int securityId) {
-        return securityId;
-    }
-
-    @PostMapping("/Security")
-    public int addPassword(@RequestBody int security) {
-        return security;
+    public List<Security> Security() {
+        return List.of(
+                new Security(
+                        "Adamu",
+                        10,
+                        "Ad@gmail.com"
+                )
+        );
     }
 }

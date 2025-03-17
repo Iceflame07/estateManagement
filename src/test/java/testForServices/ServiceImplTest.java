@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import java.time.LocalTime;
 import java.util.Random;
 
-public class serviceTest {
+public class ServiceImplTest {
 
     @Test
     public void testGenerateRandomOTP() {

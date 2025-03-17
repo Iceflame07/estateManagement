@@ -7,8 +7,6 @@ import java.util.List;
 @Repository
 public interface HouseRepository extends MongoRepository {
 
-    List<House> findByAddress(String address);
-    House findByNumber(int Number);
-    void save(House address);
-    void delete(House number);
+    List<House> FindByAddress(String address);
+    List<House> FindByHouseNumber(String houseNumber);
 }

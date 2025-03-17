@@ -19,24 +19,24 @@ public class modelTest {
 
     @Test
     public void testForSecurity() {
-        Security secure = new Security("",0,"");
-        secure.setSecurityName("");
-        secure.setAddress("");
-        secure.setPassword(0);
-        Assertions.assertEquals("",secure.getSecurityName());
-        Assertions.assertEquals("",secure.getAddress());
-        Assertions.assertEquals(0, secure.getPassword());
+        Security secure = new Security("Adamu",10,0);
+        secure.setSecurityName("Adamu");
+        secure.setSecurityId(10);
+        secure.setSecurityPassword(0000);
+        Assertions.assertEquals("Adamu",secure.getSecurityName());
+        Assertions.assertEquals(10,secure.getSecurityId());
+        Assertions.assertEquals(0000,secure.getSecurityPassword());
     }
 
     @Test
     public void testForUser() {
-        User uses = new User("","",0000);
+        User uses = new User("","",0);
         uses.setName("George");
         uses.setEmail("George@gmail.com");
-        uses.setPassword(0000);
+        uses.setPassword(0);
         Assertions.assertEquals("George",uses.getName());
         Assertions.assertEquals("George@gmail.com",uses.getEmail());
-        Assertions.assertEquals(0000,uses.getPassword());
+        Assertions.assertEquals(0,uses.getPassword());
         Assertions.assertTrue(true, String.valueOf(uses.getPassword()));
         Assertions.assertFalse(false, String.valueOf(uses.getPassword()));
     }

@@ -4,6 +4,5 @@ public class UserRequest {
 
     private String name;
     private String email;
-    private String password;
-    private int OTP;
+    private int password;
 }

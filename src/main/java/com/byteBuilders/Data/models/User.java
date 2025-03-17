@@ -10,11 +10,11 @@ public class User extends House{
     @Id
     private String name;
     private String email;
-    private double password;
+    private int password;
 
     public User(String name,
-                int email,
-                String password) {
+                String email,
+                int password) {
 
         super(name, Integer.parseInt(email), password);
 

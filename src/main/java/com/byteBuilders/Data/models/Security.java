@@ -10,12 +10,12 @@ public class Security extends User {
     @Id
     private String securityName;
     private int securityId;
-    private String securityPassword;
+    private int securityPassword;
 
-    public Security(String name, int Id, String password) {
-        super(name, Id, password);
+    public Security(String securityName,
+                    int securityId,
+                    int securityPassword) {
+
+        super(securityName, String.valueOf(securityId), securityPassword);
     }
-
-    private int Password;
-
 }

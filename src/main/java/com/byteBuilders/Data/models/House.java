@@ -15,10 +15,10 @@ public class House {
 
     public House(String address,
                  int houseNumber,
-                 double generateOTP) {
+                 int generateOTP) {
 
         this.address = address;
         this.houseNumber = houseNumber;
-        this.generateOTP = (int) generateOTP;
+        this.generateOTP = generateOTP;
     }
 }

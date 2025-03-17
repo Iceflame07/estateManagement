@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="HttpClientEndpointsTabState">
-    <option name="requestToText" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;d693bcd6e4c221b23e23c01cef2baeb8e8700477&quot; value=&quot;###&amp;#10;GET http://localhost:8080/api/UserList&quot; /&gt;&#10;  &lt;entry key=&quot;8f04dc97d75d662a7b38070f71be25bf5153146a&quot; value=&quot;###&amp;#10;GET http://localhost:8080/api/v1/HouseList&quot; /&gt;&#10;  &lt;entry key=&quot;7abec651c03bf15cf83d6cac597379693efa5fc0&quot; value=&quot;###&amp;#10;GET http://localhost:8080/HouseList&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+    <option name="requestToText" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;7b6b37f1a81ba477dfcc951ce87de1989b1dfe34&quot; value=&quot;###&amp;#10;GET http://localhost:8080/User&quot; /&gt;&#10;  &lt;entry key=&quot;abb60810b6d50c0de21f91a1aabe9011d22e98ee&quot; value=&quot;###&amp;#10;GET http://localhost:8080/House/HouseList&quot; /&gt;&#10;  &lt;entry key=&quot;f0103b821425d7040f5a1edc5ef5a88e561caa4b&quot; value=&quot;###&amp;#10;GET http://localhost:8080/Security&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
   </component>
 </project>

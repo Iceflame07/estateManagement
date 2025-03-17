@@ -6,6 +6,6 @@ import lombok.Data;
 public class SecurityRequest {
 
     private String securityName;
-    private String securityPassword;
+    private int securityPassword;
     private int securityId;
 }
